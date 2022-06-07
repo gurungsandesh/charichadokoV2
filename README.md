@@ -1,2 +1,2 @@
 # charichadokoV2
- Online grocery store with onw day delivery
+ Online grocery store with one day delivery
