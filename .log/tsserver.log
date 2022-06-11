@@ -1,0 +1,6 @@
+Info 0    [00:01:04.682] Starting TS Server
+Info 1    [00:01:04.688] Version: 4.6.4
+Info 2    [00:01:04.688] Arguments: C:\Program Files\nodejs\node.exe c:\Users\raisa\AppData\Roaming\npm\node_modules\typescript\lib\tsserver.js --logFile c:\Charicha Softwares\charichadokoV2\.log\tsserver.log --logVerbosity info --cancellationPipeName C:\Users\raisa\AppData\Local\Temp\831817adeac85a0c77ea94a2f9e1fb8d\tscancellation*
+Info 3    [00:01:04.688] Platform: win32 NodeVersion: 16 CaseSensitive: false
+Info 4    [00:01:04.688] ServerMode: undefined syntaxOnly: false hasUnknownServerMode: undefined
+Info 5    [00:01:04.728] Format host information updated
