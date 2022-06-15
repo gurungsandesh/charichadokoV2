@@ -5,11 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Category;
 
+/**
+ * @group Category
+ * Category Details 
+ */
+
 class CategoryController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
+     * Display all categories
+     * List all available categories
      * @return \Illuminate\Http\Response
      */
     public function index()
@@ -18,10 +23,11 @@ class CategoryController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * Insert new category
+     * @bodyParam category_name string required The name of the category.
+     * @response 200 {
+        "message" : "Category Added Successfully"
+     * }
      */
     public function store(Request $request)
     {
@@ -30,14 +36,13 @@ class CategoryController extends Controller
         ]);
         $info = Category::create($request->all());
         if ($info) {
-            return response(['success' => 'Category Added Successfully.'], 201);
+            return response(['success' => 'Category Added Successfully.'], 200);
         }
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
+     * Display specified category
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -46,11 +51,11 @@ class CategoryController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * Update specified category
+     * @bodyParam category_name string required The name of the category.
+     * @response 200 {
+        "message": "Category Updated Successfully
+     * }
      */
     public function update(Request $request, $id)
     {
@@ -64,10 +69,11 @@ class CategoryController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * Remove specified category.
+     * @param int $id 
+     * @response 200 {
+        "message":"Category Deleted Successfully"
+     * }
      */
     public function destroy($id)
     {

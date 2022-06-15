@@ -1,0 +1,169 @@
+name: Category
+description: 'Category Details'
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/category
+    metadata:
+      title: 'Insert new category'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      category_name:
+        name: category_name
+        description: 'The name of the category.'
+        required: true
+        example: dolores
+        type: string
+        custom: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "message" : "Category Added Successfully"
+          }
+        headers: []
+        description: '200'
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/category/{id}'
+    metadata:
+      title: 'Display specified category'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the category.'
+        required: true
+        example: 5
+        type: integer
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"id":5,"category_name":"frozen products","created_at":"2022-06-08T16:44:53.000000Z","updated_at":"2022-06-08T16:44:53.000000Z"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '59'
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/category
+    metadata:
+      title: |-
+        Display all categories
+        List all available categories
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '[{"id":3,"category_name":"bakery & dairy","created_at":"2022-06-08T16:44:33.000000Z","updated_at":"2022-06-08T16:44:33.000000Z"},{"id":4,"category_name":"belove","created_at":"2022-06-08T16:44:43.000000Z","updated_at":"2022-06-08T17:03:19.000000Z"},{"id":5,"category_name":"frozen products","created_at":"2022-06-08T16:44:53.000000Z","updated_at":"2022-06-08T16:44:53.000000Z"},{"id":6,"category_name":"household","created_at":"2022-06-08T16:45:02.000000Z","updated_at":"2022-06-08T16:45:02.000000Z"},{"id":7,"category_name":"personal care","created_at":"2022-06-08T16:45:12.000000Z","updated_at":"2022-06-08T16:45:12.000000Z"},{"id":8,"category_name":"liquor & tobacco","created_at":"2022-06-08T16:45:33.000000Z","updated_at":"2022-06-08T16:45:33.000000Z"},{"id":9,"category_name":"grocery","created_at":"2022-06-08T16:55:35.000000Z","updated_at":"2022-06-08T16:55:35.000000Z"},{"id":10,"category_name":"kids & baby care","created_at":"2022-06-08T16:56:06.000000Z","updated_at":"2022-06-08T16:56:06.000000Z"}]'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '58'
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/v1/category/{id}'
+    metadata:
+      title: 'Remove specified category.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the category.'
+        required: true
+        example: 14
+        type: integer
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "message":"Category Deleted Successfully"
+          }
+        headers: []
+        description: '200'
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/v1/category/{id}'
+    metadata:
+      title: 'Update specified category'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the category.'
+        required: true
+        example: 9
+        type: integer
+        custom: []
+    queryParameters: []
+    bodyParameters:
+      category_name:
+        name: category_name
+        description: 'The name of the category.'
+        required: true
+        example: maiores
+        type: string
+        custom: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "message": "Category Updated Successfully
+          }
+        headers: []
+        description: '200'
+    responseFields: []
