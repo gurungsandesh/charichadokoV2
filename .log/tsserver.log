@@ -1,6 +1,237 @@
-Info 0    [00:01:04.682] Starting TS Server
-Info 1    [00:01:04.688] Version: 4.6.4
-Info 2    [00:01:04.688] Arguments: C:\Program Files\nodejs\node.exe c:\Users\raisa\AppData\Roaming\npm\node_modules\typescript\lib\tsserver.js --logFile c:\Charicha Softwares\charichadokoV2\.log\tsserver.log --logVerbosity info --cancellationPipeName C:\Users\raisa\AppData\Local\Temp\831817adeac85a0c77ea94a2f9e1fb8d\tscancellation*
-Info 3    [00:01:04.688] Platform: win32 NodeVersion: 16 CaseSensitive: false
-Info 4    [00:01:04.688] ServerMode: undefined syntaxOnly: false hasUnknownServerMode: undefined
-Info 5    [00:01:04.728] Format host information updated
+Info 0    [23:55:46.093] Starting TS Server
+Info 1    [23:55:46.099] Version: 4.6.4
+Info 2    [23:55:46.099] Arguments: C:\Program Files\nodejs\node.exe c:\Users\raisa\AppData\Roaming\npm\node_modules\typescript\lib\tsserver.js --logFile c:\Charicha Softwares\charichadokoV2\.log\tsserver.log --logVerbosity info --cancellationPipeName C:\Users\raisa\AppData\Local\Temp\5601d11ccb43b8a13c5ffd4f72de0a8a\tscancellation*
+Info 3    [23:55:46.099] Platform: win32 NodeVersion: 16 CaseSensitive: false
+Info 4    [23:55:46.099] ServerMode: undefined syntaxOnly: false hasUnknownServerMode: undefined
+Info 5    [23:55:46.116] Format host information updated
+Info 6    [23:55:46.306] Search path: c:/Charicha Softwares/charichadokoV2/client/src/components
+Info 7    [23:55:46.308] For info: c:/Charicha Softwares/charichadokoV2/client/src/components/Navbar.tsx :: Config file name: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 8    [23:55:46.309] Creating configuration project c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 9    [23:55:46.354] Config: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json : {
+ "rootNames": [
+  "c:/Charicha Softwares/charichadokoV2/client/src/App.tsx",
+  "c:/Charicha Softwares/charichadokoV2/client/src/main.tsx",
+  "c:/Charicha Softwares/charichadokoV2/client/src/vite-env.d.ts",
+  "c:/Charicha Softwares/charichadokoV2/client/src/components/Navbar.tsx",
+  "c:/Charicha Softwares/charichadokoV2/client/src/components/ProductCard.tsx",
+  "c:/Charicha Softwares/charichadokoV2/client/src/config/config.ts",
+  "c:/Charicha Softwares/charichadokoV2/client/src/pages/home.tsx",
+  "c:/Charicha Softwares/charichadokoV2/client/src/section/header.tsx"
+ ],
+ "options": {
+  "target": 99,
+  "useDefineForClassFields": true,
+  "lib": [
+   "lib.dom.d.ts",
+   "lib.dom.iterable.d.ts",
+   "lib.esnext.d.ts"
+  ],
+  "allowJs": false,
+  "skipLibCheck": true,
+  "esModuleInterop": false,
+  "allowSyntheticDefaultImports": true,
+  "strict": true,
+  "forceConsistentCasingInFileNames": true,
+  "module": 99,
+  "moduleResolution": 2,
+  "resolveJsonModule": true,
+  "isolatedModules": true,
+  "noEmit": true,
+  "jsx": 4,
+  "configFilePath": "c:/Charicha Softwares/charichadokoV2/client/tsconfig.json"
+ },
+ "projectReferences": [
+  {
+   "path": "c:/Charicha Softwares/charichadokoV2/client/tsconfig.node.json",
+   "originalPath": "./tsconfig.node.json"
+  }
+ ]
+}
+Info 10   [23:55:46.506] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 11   [23:55:46.519] Config: c:/Charicha Softwares/charichadokoV2/client/tsconfig.node.json : {
+ "rootNames": [
+  "c:/Charicha Softwares/charichadokoV2/client/vite.config.ts"
+ ],
+ "options": {
+  "composite": true,
+  "module": 99,
+  "moduleResolution": 2,
+  "configFilePath": "c:/Charicha Softwares/charichadokoV2/client/tsconfig.node.json"
+ }
+}
+Info 12   [23:55:48.217] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 1 structureChanged: true structureIsReused:: Not Elapsed: 1711.4317000061274ms
+Info 13   [23:55:48.218] Project 'c:/Charicha Softwares/charichadokoV2/client/tsconfig.json' (Configured)
+Info 14   [23:55:48.218] 	Files (73)
+
+Info 15   [23:55:48.218] -----------------------------------------------
+Info 16   [23:55:48.332] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 17   [23:55:48.350] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 2 structureChanged: false structureIsReused:: Completely Elapsed: 18.1976999938488ms
+Info 18   [23:55:48.350] Different program with same set of files
+Info 19   [23:55:48.368] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 20   [23:55:48.377] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 3 structureChanged: false structureIsReused:: Completely Elapsed: 8.85300000011921ms
+Info 21   [23:55:48.377] Different program with same set of files
+Info 22   [23:55:49.038] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 23   [23:55:49.047] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 4 structureChanged: false structureIsReused:: Completely Elapsed: 9.344500005245209ms
+Info 24   [23:55:49.047] Different program with same set of files
+Info 25   [23:55:50.158] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 26   [23:55:50.162] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 5 structureChanged: false structureIsReused:: Completely Elapsed: 4.427599996328354ms
+Info 27   [23:55:50.162] Different program with same set of files
+Info 28   [23:55:50.447] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 29   [23:55:50.451] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 6 structureChanged: false structureIsReused:: Completely Elapsed: 3.9679999947547913ms
+Info 30   [23:55:50.451] Different program with same set of files
+Info 31   [23:55:50.920] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 32   [23:55:50.924] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 7 structureChanged: false structureIsReused:: Completely Elapsed: 4.733800008893013ms
+Info 33   [23:55:50.924] Different program with same set of files
+Info 34   [23:55:50.927] getCompletionData: Get current token: 0.02170000970363617
+Info 35   [23:55:50.927] getCompletionData: Is inside comment: 0.06029999256134033
+Info 36   [23:55:50.927] getCompletionData: Get previous token: 0.06610000133514404
+Info 37   [23:55:50.927] getCompletionsAtPosition: isCompletionListBlocker: 0.23160000145435333
+Info 38   [23:55:50.938] getExportInfoMap: cache miss or empty; calculating new results
+Info 39   [23:55:50.947] getExportInfoMap: done in 14.42569999396801 ms
+Info 40   [23:55:50.949] collectAutoImports: resolved 0 module specifiers, plus 0 ambient and 0 from cache
+Info 41   [23:55:50.949] collectAutoImports: response is complete
+Info 42   [23:55:50.949] collectAutoImports: 1.3016999959945679
+Info 43   [23:55:50.949] getCompletionData: Semantic work: 21.214299991726875
+Info 44   [23:55:50.989] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 39.97959999740124
+Info 45   [23:55:51.119] Format host information updated
+Info 46   [23:55:51.342] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 47   [23:55:51.346] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 8 structureChanged: false structureIsReused:: Completely Elapsed: 4.085199996829033ms
+Info 48   [23:55:51.346] Different program with same set of files
+Info 49   [23:55:52.350] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 50   [23:55:52.355] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 9 structureChanged: false structureIsReused:: Completely Elapsed: 4.969799995422363ms
+Info 51   [23:55:52.355] Different program with same set of files
+Info 52   [23:55:53.342] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 53   [23:55:53.348] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 10 structureChanged: false structureIsReused:: Completely Elapsed: 5.113299995660782ms
+Info 54   [23:55:53.348] Different program with same set of files
+Info 55   [23:55:53.784] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 56   [23:55:53.788] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 11 structureChanged: false structureIsReused:: Completely Elapsed: 3.9549999982118607ms
+Info 57   [23:55:53.788] Different program with same set of files
+Info 58   [23:55:53.788] getCompletionData: Get current token: 0.01690000295639038
+Info 59   [23:55:53.788] getCompletionData: Is inside comment: 0.004800006747245789
+Info 60   [23:55:53.788] getCompletionData: Get previous token: 0.07719999551773071
+Info 61   [23:55:53.789] getCompletionsAtPosition: isCompletionListBlocker: 0.003099992871284485
+Info 62   [23:55:53.798] getExportInfoMap: cache hit
+Info 63   [23:55:53.799] collectAutoImports: resolved 0 module specifiers, plus 0 ambient and 0 from cache
+Info 64   [23:55:53.799] collectAutoImports: response is complete
+Info 65   [23:55:53.800] collectAutoImports: 0.7098000049591064
+Info 66   [23:55:53.800] getCompletionData: Semantic work: 10.938999995589256
+Info 67   [23:55:53.857] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 21.187700003385544
+Info 68   [23:55:54.542] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 69   [23:55:54.549] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 12 structureChanged: false structureIsReused:: Completely Elapsed: 6.794600009918213ms
+Info 70   [23:55:54.549] Different program with same set of files
+Info 71   [23:55:55.023] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 72   [23:55:55.028] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 13 structureChanged: false structureIsReused:: Completely Elapsed: 4.982600003480911ms
+Info 73   [23:55:55.028] Different program with same set of files
+Info 74   [23:55:55.029] getCompletionData: Get current token: 0.016599997878074646
+Info 75   [23:55:55.029] getCompletionData: Is inside comment: 0.004199996590614319
+Info 76   [23:55:55.029] getCompletionData: Get previous token: 0.07190001010894775
+Info 77   [23:55:55.029] getCompletionsAtPosition: isCompletionListBlocker: 0.1102999895811081
+Info 78   [23:55:55.030] getCompletionData: Semantic work: 0.4130999892950058
+Info 79   [23:55:57.198] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 80   [23:55:57.202] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 14 structureChanged: false structureIsReused:: Completely Elapsed: 3.9459999948740005ms
+Info 81   [23:55:57.202] Different program with same set of files
+Info 82   [23:55:58.078] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 83   [23:55:58.082] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 15 structureChanged: false structureIsReused:: Completely Elapsed: 4.284400001168251ms
+Info 84   [23:55:58.082] Different program with same set of files
+Info 85   [23:55:59.062] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 86   [23:55:59.066] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 16 structureChanged: false structureIsReused:: Completely Elapsed: 4.036100000143051ms
+Info 87   [23:55:59.066] Different program with same set of files
+Info 88   [23:55:59.894] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 89   [23:55:59.898] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 17 structureChanged: false structureIsReused:: Completely Elapsed: 3.7930000126361847ms
+Info 90   [23:55:59.898] Different program with same set of files
+Info 91   [23:56:00.662] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 92   [23:56:00.666] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 18 structureChanged: false structureIsReused:: Completely Elapsed: 3.7088000029325485ms
+Info 93   [23:56:00.666] Different program with same set of files
+Info 94   [23:56:00.666] getCompletionData: Get current token: 0.014400005340576172
+Info 95   [23:56:00.666] getCompletionData: Is inside comment: 0.004099994897842407
+Info 96   [23:56:00.667] getCompletionData: Get previous token: 0.05050000548362732
+Info 97   [23:56:00.667] getCompletionsAtPosition: isCompletionListBlocker: 0.019299998879432678
+Info 98   [23:56:00.692] getCompletionData: Semantic work: 25.586400002241135
+Info 99   [23:56:00.718] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 23.61550000309944
+Info 100  [23:56:01.119] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 101  [23:56:01.131] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 19 structureChanged: false structureIsReused:: Completely Elapsed: 11.94930000603199ms
+Info 102  [23:56:01.131] Different program with same set of files
+Info 103  [23:56:01.605] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 104  [23:56:01.610] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 20 structureChanged: false structureIsReused:: Completely Elapsed: 4.556799992918968ms
+Info 105  [23:56:01.610] Different program with same set of files
+Info 106  [23:56:02.021] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 107  [23:56:02.027] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 21 structureChanged: false structureIsReused:: Completely Elapsed: 5.905799999833107ms
+Info 108  [23:56:02.027] Different program with same set of files
+Info 109  [23:56:02.293] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 110  [23:56:02.296] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 22 structureChanged: false structureIsReused:: Completely Elapsed: 3.3266000002622604ms
+Info 111  [23:56:02.296] Different program with same set of files
+Info 112  [23:56:03.797] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 113  [23:56:03.805] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 23 structureChanged: false structureIsReused:: Completely Elapsed: 7.280200004577637ms
+Info 114  [23:56:03.805] Different program with same set of files
+Info 115  [23:56:07.589] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 116  [23:56:07.594] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 24 structureChanged: false structureIsReused:: Completely Elapsed: 4.852899998426437ms
+Info 117  [23:56:07.594] Different program with same set of files
+Info 118  [23:56:08.223] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 119  [23:56:08.228] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 25 structureChanged: false structureIsReused:: Completely Elapsed: 3.2527999877929688ms
+Info 120  [23:56:08.228] Different program with same set of files
+Info 121  [23:56:08.231] getCompletionData: Get current token: 0.015799999237060547
+Info 122  [23:56:08.231] getCompletionData: Is inside comment: 0.006400004029273987
+Info 123  [23:56:08.231] getCompletionData: Get previous token: 0.04880000650882721
+Info 124  [23:56:08.231] getCompletionsAtPosition: isCompletionListBlocker: 0.011399999260902405
+Info 125  [23:56:08.231] getCompletionData: Semantic work: 0.2094999998807907
+Info 126  [23:56:09.517] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 127  [23:56:09.521] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 26 structureChanged: false structureIsReused:: Completely Elapsed: 3.536100000143051ms
+Info 128  [23:56:09.521] Different program with same set of files
+Info 129  [23:56:10.282] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 130  [23:56:10.288] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 27 structureChanged: false structureIsReused:: Completely Elapsed: 5.714800000190735ms
+Info 131  [23:56:10.288] Different program with same set of files
+Info 132  [23:56:12.034] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 133  [23:56:12.037] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 28 structureChanged: false structureIsReused:: Completely Elapsed: 3.309900000691414ms
+Info 134  [23:56:12.037] Different program with same set of files
+Info 135  [23:56:12.715] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 136  [23:56:12.718] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 29 structureChanged: false structureIsReused:: Completely Elapsed: 3.761700004339218ms
+Info 137  [23:56:12.718] Different program with same set of files
+Info 138  [23:56:12.740] getCompletionData: Get current token: 0.029899999499320984
+Info 139  [23:56:12.740] getCompletionData: Is inside comment: 0.007200002670288086
+Info 140  [23:56:12.740] getCompletionData: Get previous token: 0.08499999344348907
+Info 141  [23:56:12.740] getCompletionsAtPosition: isCompletionListBlocker: 0.01629999279975891
+Info 142  [23:56:12.740] Returning an empty list because completion was requested in an invalid position.
+Info 143  [23:56:12.743] getCompletionData: Get current token: 0.014200001955032349
+Info 144  [23:56:12.743] getCompletionData: Is inside comment: 0.004100009799003601
+Info 145  [23:56:12.743] getCompletionData: Get previous token: 0.03710000216960907
+Info 146  [23:56:12.744] getCompletionsAtPosition: isCompletionListBlocker: 0.015000000596046448
+Info 147  [23:56:12.744] Returning an empty list because completion was requested in an invalid position.
+Info 148  [23:56:13.250] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 149  [23:56:13.254] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 30 structureChanged: false structureIsReused:: Completely Elapsed: 3.94480000436306ms
+Info 150  [23:56:13.254] Different program with same set of files
+Info 151  [23:56:13.563] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 152  [23:56:13.566] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 31 structureChanged: false structureIsReused:: Completely Elapsed: 3.414900004863739ms
+Info 153  [23:56:13.566] Different program with same set of files
+Info 154  [23:56:13.584] getCompletionData: Get current token: 0.022100001573562622
+Info 155  [23:56:13.584] getCompletionData: Is inside comment: 0.0042999982833862305
+Info 156  [23:56:13.584] getCompletionData: Get previous token: 0.043699994683265686
+Info 157  [23:56:13.584] getCompletionsAtPosition: isCompletionListBlocker: 0.008399993181228638
+Info 158  [23:56:13.584] Returning an empty list because completion was requested in an invalid position.
+Info 159  [23:56:13.587] getCompletionData: Get current token: 0.015199989080429077
+Info 160  [23:56:13.587] getCompletionData: Is inside comment: 0.004100009799003601
+Info 161  [23:56:13.587] getCompletionData: Get previous token: 0.030000001192092896
+Info 162  [23:56:13.587] getCompletionsAtPosition: isCompletionListBlocker: 0.011800006031990051
+Info 163  [23:56:13.587] Returning an empty list because completion was requested in an invalid position.
+Info 164  [23:56:13.851] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 165  [23:56:13.856] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 32 structureChanged: false structureIsReused:: Completely Elapsed: 4.483300000429153ms
+Info 166  [23:56:13.856] Different program with same set of files
+Info 167  [23:56:13.857] getCompletionData: Get current token: 0.01750001311302185
+Info 168  [23:56:13.857] getCompletionData: Is inside comment: 0.006800010800361633
+Info 169  [23:56:13.857] getCompletionData: Get previous token: 0.04179999232292175
+Info 170  [23:56:13.857] getCompletionsAtPosition: isCompletionListBlocker: 0.010800004005432129
+Info 171  [23:56:13.857] Returning an empty list because completion was requested in an invalid position.
+Info 172  [23:56:13.883] getCompletionData: Get current token: 0.023499995470046997
+Info 173  [23:56:13.883] getCompletionData: Is inside comment: 0.003900006413459778
+Info 174  [23:56:13.883] getCompletionData: Get previous token: 0.03190000355243683
+Info 175  [23:56:13.883] getCompletionsAtPosition: isCompletionListBlocker: 0.010399997234344482
+Info 176  [23:56:13.883] Returning an empty list because completion was requested in an invalid position.
+Info 177  [23:56:14.282] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 178  [23:56:14.286] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 33 structureChanged: false structureIsReused:: Completely Elapsed: 3.759799987077713ms
+Info 179  [23:56:14.286] Different program with same set of files
+Info 180  [23:56:14.306] Format host information updated
+Info 181  [23:56:14.538] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 182  [23:56:14.541] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 34 structureChanged: false structureIsReused:: Completely Elapsed: 3.3801999986171722ms
+Info 183  [23:56:14.541] Different program with same set of files
+Info 184  [23:56:15.882] Starting updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json
+Info 185  [23:56:15.886] Finishing updateGraphWorker: Project: c:/Charicha Softwares/charichadokoV2/client/tsconfig.json Version: 35 structureChanged: false structureIsReused:: Completely Elapsed: 3.7935999929904938ms
+Info 186  [23:56:15.886] Different program with same set of files
