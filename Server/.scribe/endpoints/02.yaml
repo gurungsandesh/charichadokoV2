@@ -1,0 +1,195 @@
+name: 'Product Details'
+description: 'List all the product operations'
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/products
+    metadata:
+      title: 'Insert new product'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters:
+      product_name:
+        name: product_name
+        description: 'The name of the product'
+        required: true
+        example: laborum
+        type: string
+        custom: []
+      order:
+        name: order
+        description: 'The arrangement of the product'
+        required: true
+        example: 16
+        type: integer
+        custom: []
+      category_id:
+        name: category_id
+        description: 'The id of the category'
+        required: true
+        example: 16
+        type: integer
+        custom: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "message" : "Product Added Successfully"
+          }
+        headers: []
+        description: '200'
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/products
+    metadata:
+      title: 'Display all available products'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '[{"id":2,"product_name":"Yellow","category_id":4,"order":"7","created_at":"2022-06-20T11:28:27.000000Z","updated_at":"2022-06-20T11:53:58.000000Z"},{"id":5,"product_name":"Audi","category_id":5,"order":"10","created_at":"2022-06-20T11:50:10.000000Z","updated_at":"2022-06-20T11:59:36.000000Z"},{"id":6,"product_name":"HP","category_id":3,"order":"3","created_at":"2022-06-20T11:50:25.000000Z","updated_at":"2022-06-20T11:50:25.000000Z"},{"id":7,"product_name":"Wega","category_id":3,"order":"4","created_at":"2022-06-20T11:51:13.000000Z","updated_at":"2022-06-20T11:51:13.000000Z"}]'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '57'
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/products/{id}'
+    metadata:
+      title: 'Display specific product'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the product.'
+        required: true
+        example: 5
+        type: integer
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"id":5,"product_name":"Audi","category_id":5,"order":"10","created_at":"2022-06-20T11:50:10.000000Z","updated_at":"2022-06-20T11:59:36.000000Z"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          x-ratelimit-limit: '60'
+          x-ratelimit-remaining: '56'
+          access-control-allow-origin: '*'
+        description: null
+    responseFields: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/v1/products/{id}'
+    metadata:
+      title: 'Delete specific product'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the product.'
+        required: true
+        example: 20
+        type: integer
+        custom: []
+    queryParameters: []
+    bodyParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "message" : "Product Deleted Successfully"
+          }
+        headers: []
+        description: '200'
+    responseFields: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/v1/products/{id}'
+    metadata:
+      title: 'Update specific product'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the product.'
+        required: true
+        example: 4
+        type: integer
+        custom: []
+    queryParameters: []
+    bodyParameters:
+      category_id:
+        name: category_id
+        description: 'The id of category'
+        required: true
+        example: 4
+        type: integer
+        custom: []
+      order:
+        name: order
+        description: ''
+        required: true
+        example: rerum
+        type: string
+        custom: []
+      product_name:
+        name: product_name
+        description: 'The name of Product'
+        required: true
+        example: numquam
+        type: string
+        custom: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "message": "Product Updated Successfully
+          }
+        headers: []
+        description: '200'
+    responseFields: []

@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 
 /**
- * @group Category
- * Category Details 
+ * @group Category Details
+ * List all category operations
  */
 
 class CategoryController extends Controller
@@ -52,6 +52,7 @@ class CategoryController extends Controller
 
     /**
      * Update specified category
+     * @param int $id
      * @bodyParam category_name string required The name of the category.
      * @response 200 {
         "message": "Category Updated Successfully
