@@ -22,7 +22,7 @@ endpoints:
         name: category_name
         description: 'The name of the category.'
         required: true
-        example: ut
+        example: animi
         type: string
         custom: []
     responses:
@@ -52,7 +52,7 @@ endpoints:
         name: id
         description: 'The ID of the category.'
         required: true
-        example: 13
+        example: 2
         type: integer
         custom: []
     queryParameters: []
@@ -115,7 +115,7 @@ endpoints:
         name: id
         description: 'The ID of the category.'
         required: true
-        example: 9
+        example: 6
         type: integer
         custom: []
     queryParameters: []
@@ -147,7 +147,7 @@ endpoints:
         name: id
         description: 'The ID of the category.'
         required: true
-        example: 13
+        example: 18
         type: integer
         custom: []
     queryParameters: []
@@ -156,7 +156,7 @@ endpoints:
         name: category_name
         description: 'The name of the category.'
         required: true
-        example: incidunt
+        example: velit
         type: string
         custom: []
     responses:

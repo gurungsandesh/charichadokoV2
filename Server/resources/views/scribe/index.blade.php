@@ -134,7 +134,7 @@ List all available categories</a>
                             <li><a href="http://github.com/knuckleswtf/scribe">Documentation powered by Scribe ✍</a></li>
                     </ul>
         <ul class="toc-footer" id="last-updated">
-        <li>Last updated: June 20 2022</li>
+        <li>Last updated: June 21 2022</li>
     </ul>
 </div>
 
@@ -174,7 +174,7 @@ You can switch the language used with the tabs at the top right (or from the nav
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"category_name\": \"ut\"
+    \"category_name\": \"animi\"
 }"
 </code></pre></div>
 
@@ -190,7 +190,7 @@ const headers = {
 };
 
 let body = {
-    "category_name": "ut"
+    "category_name": "animi"
 };
 
 fetch(url, {
@@ -257,7 +257,7 @@ fetch(url, {
                 <input type="text"
                name="category_name"
                data-endpoint="POSTapi-v1-category"
-               value="ut"
+               value="animi"
                data-component="body" hidden>
     <br>
 <p>The name of the category.</p>
@@ -277,14 +277,14 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/v1/category/13" \
+    --get "http://localhost/api/v1/category/2" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/v1/category/13"
+    "http://localhost/api/v1/category/2"
 );
 
 const headers = {
@@ -363,7 +363,7 @@ access-control-allow-origin: *
                 <input type="number"
                name="id"
                data-endpoint="GETapi-v1-category--id-"
-               value="13"
+               value="2"
                data-component="url" hidden>
     <br>
 <p>The ID of the category.</p>
@@ -528,14 +528,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "http://localhost/api/v1/category/9" \
+    "http://localhost/api/v1/category/6" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/v1/category/9"
+    "http://localhost/api/v1/category/6"
 );
 
 const headers = {
@@ -606,7 +606,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="DELETEapi-v1-category--id-"
-               value="9"
+               value="6"
                data-component="url" hidden>
     <br>
 <p>The ID of the category.</p>
@@ -626,18 +626,18 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/v1/category/13" \
+    "http://localhost/api/v1/category/18" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"category_name\": \"incidunt\"
+    \"category_name\": \"velit\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/v1/category/13"
+    "http://localhost/api/v1/category/18"
 );
 
 const headers = {
@@ -646,7 +646,7 @@ const headers = {
 };
 
 let body = {
-    "category_name": "incidunt"
+    "category_name": "velit"
 };
 
 fetch(url, {
@@ -713,7 +713,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="PUTapi-v1-category--id-"
-               value="13"
+               value="18"
                data-component="url" hidden>
     <br>
 <p>The ID of the category.</p>
@@ -724,7 +724,7 @@ fetch(url, {
                 <input type="text"
                name="category_name"
                data-endpoint="PUTapi-v1-category--id-"
-               value="incidunt"
+               value="velit"
                data-component="body" hidden>
     <br>
 <p>The name of the category.</p>
@@ -848,14 +848,13 @@ access-control-allow-origin: *
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
     "http://localhost/api/v1/products" \
-    --header "Content-Type: application/json" \
+    --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --data "{
-    \"product_name\": \"laborum\",
-    \"order\": 16,
-    \"category_id\": 16
-}"
-</code></pre></div>
+    --form "product_name=iste" \
+    --form "order=13" \
+    --form "category_id=3" \
+    --form "price=18" \
+    --form "file=@C:\Users\singo\AppData\Local\Temp\php8E4F.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -864,20 +863,21 @@ access-control-allow-origin: *
 );
 
 const headers = {
-    "Content-Type": "application/json",
+    "Content-Type": "multipart/form-data",
     "Accept": "application/json",
 };
 
-let body = {
-    "product_name": "laborum",
-    "order": 16,
-    "category_id": 16
-};
+const body = new FormData();
+body.append('product_name', 'iste');
+body.append('order', '13');
+body.append('category_id', '3');
+body.append('price', '18');
+body.append('file', document.querySelector('input[name="file"]').files[0]);
 
 fetch(url, {
     method: "POST",
     headers,
-    body: JSON.stringify(body),
+    body,
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
@@ -906,9 +906,9 @@ fetch(url, {
 <form id="form-POSTapi-v1-products" data-method="POST"
       data-path="api/v1/products"
       data-authed="0"
-      data-hasfiles="0"
+      data-hasfiles="1"
       data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Content-Type":"multipart\/form-data","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('POSTapi-v1-products', this);">
     <h3>
@@ -938,7 +938,7 @@ fetch(url, {
                 <input type="text"
                name="product_name"
                data-endpoint="POSTapi-v1-products"
-               value="laborum"
+               value="iste"
                data-component="body" hidden>
     <br>
 <p>The name of the product</p>
@@ -948,7 +948,7 @@ fetch(url, {
                 <input type="number"
                name="order"
                data-endpoint="POSTapi-v1-products"
-               value="16"
+               value="13"
                data-component="body" hidden>
     <br>
 <p>The arrangement of the product</p>
@@ -958,10 +958,30 @@ fetch(url, {
                 <input type="number"
                name="category_id"
                data-endpoint="POSTapi-v1-products"
-               value="16"
+               value="3"
                data-component="body" hidden>
     <br>
 <p>The id of the category</p>
+        </p>
+                <p>
+            <b><code>price</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="price"
+               data-endpoint="POSTapi-v1-products"
+               value="18"
+               data-component="body" hidden>
+    <br>
+<p>The price of the product</p>
+        </p>
+                <p>
+            <b><code>file</code></b>&nbsp;&nbsp;<small>file</small>  &nbsp;
+                <input type="file"
+               name="file"
+               data-endpoint="POSTapi-v1-products"
+               value=""
+               data-component="body" hidden>
+    <br>
+<p>The image of the product</p>
         </p>
         </form>
 
@@ -1018,36 +1038,54 @@ access-control-allow-origin: *
 
 <code class="language-json">[
     {
-        &quot;id&quot;: 2,
-        &quot;product_name&quot;: &quot;Yellow&quot;,
-        &quot;category_id&quot;: 4,
-        &quot;order&quot;: &quot;7&quot;,
-        &quot;created_at&quot;: &quot;2022-06-20T11:28:27.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-06-20T11:53:58.000000Z&quot;
-    },
-    {
         &quot;id&quot;: 5,
-        &quot;product_name&quot;: &quot;Audi&quot;,
+        &quot;product_name&quot;: &quot;Mouse&quot;,
         &quot;category_id&quot;: 5,
-        &quot;order&quot;: &quot;10&quot;,
-        &quot;created_at&quot;: &quot;2022-06-20T11:50:10.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-06-20T11:59:36.000000Z&quot;
+        &quot;order&quot;: &quot;11&quot;,
+        &quot;price&quot;: 4500,
+        &quot;file&quot;: &quot;1655798819updatedFile.jpg&quot;,
+        &quot;created_at&quot;: &quot;2022-06-21T05:43:41.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-06-21T08:06:59.000000Z&quot;
     },
     {
         &quot;id&quot;: 6,
-        &quot;product_name&quot;: &quot;HP&quot;,
-        &quot;category_id&quot;: 3,
-        &quot;order&quot;: &quot;3&quot;,
-        &quot;created_at&quot;: &quot;2022-06-20T11:50:25.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-06-20T11:50:25.000000Z&quot;
+        &quot;product_name&quot;: &quot;Cups&quot;,
+        &quot;category_id&quot;: 5,
+        &quot;order&quot;: &quot;15&quot;,
+        &quot;price&quot;: 5000,
+        &quot;file&quot;: &quot;1655799106girl.jpg&quot;,
+        &quot;created_at&quot;: &quot;2022-06-21T05:43:58.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-06-21T08:11:46.000000Z&quot;
     },
     {
         &quot;id&quot;: 7,
-        &quot;product_name&quot;: &quot;Wega&quot;,
+        &quot;product_name&quot;: &quot;Fan&quot;,
+        &quot;category_id&quot;: 3,
+        &quot;order&quot;: &quot;3&quot;,
+        &quot;price&quot;: 20000,
+        &quot;file&quot;: &quot;1655790258girl2.jpg&quot;,
+        &quot;created_at&quot;: &quot;2022-06-21T05:44:18.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-06-21T05:44:18.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 8,
+        &quot;product_name&quot;: &quot;Desk&quot;,
         &quot;category_id&quot;: 3,
         &quot;order&quot;: &quot;4&quot;,
-        &quot;created_at&quot;: &quot;2022-06-20T11:51:13.000000Z&quot;,
-        &quot;updated_at&quot;: &quot;2022-06-20T11:51:13.000000Z&quot;
+        &quot;price&quot;: 50000,
+        &quot;file&quot;: &quot;1655790337girl.jpg&quot;,
+        &quot;created_at&quot;: &quot;2022-06-21T05:45:37.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-06-21T05:45:37.000000Z&quot;
+    },
+    {
+        &quot;id&quot;: 9,
+        &quot;product_name&quot;: &quot;Laptop&quot;,
+        &quot;category_id&quot;: 5,
+        &quot;order&quot;: &quot;10&quot;,
+        &quot;price&quot;: 120000,
+        &quot;file&quot;: &quot;1655792392updatedFile.jpg&quot;,
+        &quot;created_at&quot;: &quot;2022-06-21T06:19:52.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2022-06-21T06:19:52.000000Z&quot;
     }
 ]</code>
  </pre>
@@ -1106,14 +1144,14 @@ access-control-allow-origin: *
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "http://localhost/api/v1/products/5" \
+    --get "http://localhost/api/v1/products/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/v1/products/5"
+    "http://localhost/api/v1/products/1"
 );
 
 const headers = {
@@ -1145,12 +1183,7 @@ access-control-allow-origin: *
         </details>         <pre>
 
 <code class="language-json">{
-    &quot;id&quot;: 5,
-    &quot;product_name&quot;: &quot;Audi&quot;,
-    &quot;category_id&quot;: 5,
-    &quot;order&quot;: &quot;10&quot;,
-    &quot;created_at&quot;: &quot;2022-06-20T11:50:10.000000Z&quot;,
-    &quot;updated_at&quot;: &quot;2022-06-20T11:59:36.000000Z&quot;
+    &quot;message&quot;: &quot;No product found.&quot;
 }</code>
  </pre>
     </span>
@@ -1199,7 +1232,7 @@ access-control-allow-origin: *
                 <input type="number"
                name="id"
                data-endpoint="GETapi-v1-products--id-"
-               value="5"
+               value="1"
                data-component="url" hidden>
     <br>
 <p>The ID of the product.</p>
@@ -1317,37 +1350,37 @@ fetch(url, {
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "http://localhost/api/v1/products/4" \
-    --header "Content-Type: application/json" \
+    "http://localhost/api/v1/products/20" \
+    --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --data "{
-    \"category_id\": 4,
-    \"order\": \"rerum\",
-    \"product_name\": \"numquam\"
-}"
-</code></pre></div>
+    --form "category_id=4" \
+    --form "order=5" \
+    --form "product_name=optio" \
+    --form "price=18" \
+    --form "file=@C:\Users\singo\AppData\Local\Temp\php8EAE.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/api/v1/products/4"
+    "http://localhost/api/v1/products/20"
 );
 
 const headers = {
-    "Content-Type": "application/json",
+    "Content-Type": "multipart/form-data",
     "Accept": "application/json",
 };
 
-let body = {
-    "category_id": 4,
-    "order": "rerum",
-    "product_name": "numquam"
-};
+const body = new FormData();
+body.append('category_id', '4');
+body.append('order', '5');
+body.append('product_name', 'optio');
+body.append('price', '18');
+body.append('file', document.querySelector('input[name="file"]').files[0]);
 
 fetch(url, {
     method: "PUT",
     headers,
-    body: JSON.stringify(body),
+    body,
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
@@ -1376,9 +1409,9 @@ fetch(url, {
 <form id="form-PUTapi-v1-products--id-" data-method="PUT"
       data-path="api/v1/products/{id}"
       data-authed="0"
-      data-hasfiles="0"
+      data-hasfiles="1"
       data-isarraybody="0"
-      data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}'
+      data-headers='{"Content-Type":"multipart\/form-data","Accept":"application\/json"}'
       autocomplete="off"
       onsubmit="event.preventDefault(); executeTryOut('PUTapi-v1-products--id-', this);">
     <h3>
@@ -1408,7 +1441,7 @@ fetch(url, {
                 <input type="number"
                name="id"
                data-endpoint="PUTapi-v1-products--id-"
-               value="4"
+               value="20"
                data-component="url" hidden>
     <br>
 <p>The ID of the product.</p>
@@ -1425,24 +1458,44 @@ fetch(url, {
 <p>The id of category</p>
         </p>
                 <p>
-            <b><code>order</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-                <input type="text"
+            <b><code>order</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
                name="order"
                data-endpoint="PUTapi-v1-products--id-"
-               value="rerum"
+               value="5"
                data-component="body" hidden>
     <br>
-
+<p>The order of the product</p>
         </p>
                 <p>
             <b><code>product_name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
                 <input type="text"
                name="product_name"
                data-endpoint="PUTapi-v1-products--id-"
-               value="numquam"
+               value="optio"
                data-component="body" hidden>
     <br>
 <p>The name of Product</p>
+        </p>
+                <p>
+            <b><code>price</code></b>&nbsp;&nbsp;<small>integer</small>  &nbsp;
+                <input type="number"
+               name="price"
+               data-endpoint="PUTapi-v1-products--id-"
+               value="18"
+               data-component="body" hidden>
+    <br>
+<p>The price of the product</p>
+        </p>
+                <p>
+            <b><code>file</code></b>&nbsp;&nbsp;<small>file</small>  &nbsp;
+                <input type="file"
+               name="file"
+               data-endpoint="PUTapi-v1-products--id-"
+               value=""
+               data-component="body" hidden>
+    <br>
+<p>The image of the product</p>
         </p>
         </form>
 

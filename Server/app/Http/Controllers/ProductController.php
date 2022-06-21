@@ -27,6 +27,8 @@ class ProductController extends Controller
      * @bodyParam product_name string required The name of the product
      * @bodyParam order int required The arrangement of the product
      * @bodyParam category_id int required The id of the category
+     * @bodyParam price int required The price of the product
+     * @bodyParam file file required The image of the product
      * @response 200 {
         "message" : "Product Added Successfully"
      * }
@@ -78,6 +80,9 @@ class ProductController extends Controller
      * @param  int  $id
      * @bodyParam category_id int required The id of category
      * @bodyParam product_name  string required The name of Product
+     * @bodyParam order int required The order of the product
+     * @bodyParam price int required The price of the product
+     * @bodyParam file file required The image of the product
      * @response 200 {
         "message": "Product Updated Successfully
      * }
@@ -91,14 +96,27 @@ class ProductController extends Controller
             'price' => 'required',
             'file' => 'required | mimes:jpg,jpeg'
         ]);
+        $fName = $request->file('file')->getClientOriginalName();
+        $newFileName = time().$fName;
+        $img = Product::select('file')->where('id', $id)->first();
 
-        return $request->file('file');
-        // $updateDetails = Product::find($id)->update($request->all());
-        // if ($updateDetails) {
-        //     return response(['message' => 'Product Updated Successfully.']);
-        // } else {
-        //     return response(['message' => 'Something went wrong.']);
-        // }
+        if ($img) {
+            Storage::delete('public/product/'.$img->file);
+            $newImage = $request->file('file')->storePubliclyAs('public/product', $newFileName);
+        } 
+
+        $updateDetails = Product::find($id)->update([
+            'product_name' => $request->product_name,
+            'category_id' => $request->category_id,
+            'order' => $request->order,
+            'price' => $request->price,
+            'file' => $newFileName
+        ]);
+        if ($updateDetails) {
+            return response(['message' => 'Product Updated Successfully.']);
+        } else {
+            return response(['message' => 'Something went wrong.']);
+        }
     }
 
     /**

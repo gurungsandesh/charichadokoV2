@@ -13,7 +13,7 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
+      Content-Type: multipart/form-data
       Accept: application/json
     urlParameters: []
     queryParameters: []
@@ -22,22 +22,36 @@ endpoints:
         name: product_name
         description: 'The name of the product'
         required: true
-        example: laborum
+        example: iste
         type: string
         custom: []
       order:
         name: order
         description: 'The arrangement of the product'
         required: true
-        example: 16
+        example: 13
         type: integer
         custom: []
       category_id:
         name: category_id
         description: 'The id of the category'
         required: true
-        example: 16
+        example: 3
         type: integer
+        custom: []
+      price:
+        name: price
+        description: 'The price of the product'
+        required: true
+        example: 18
+        type: integer
+        custom: []
+      file:
+        name: file
+        description: 'The image of the product'
+        required: true
+        example: null
+        type: file
         custom: []
     responses:
       -
@@ -67,7 +81,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '[{"id":2,"product_name":"Yellow","category_id":4,"order":"7","created_at":"2022-06-20T11:28:27.000000Z","updated_at":"2022-06-20T11:53:58.000000Z"},{"id":5,"product_name":"Audi","category_id":5,"order":"10","created_at":"2022-06-20T11:50:10.000000Z","updated_at":"2022-06-20T11:59:36.000000Z"},{"id":6,"product_name":"HP","category_id":3,"order":"3","created_at":"2022-06-20T11:50:25.000000Z","updated_at":"2022-06-20T11:50:25.000000Z"},{"id":7,"product_name":"Wega","category_id":3,"order":"4","created_at":"2022-06-20T11:51:13.000000Z","updated_at":"2022-06-20T11:51:13.000000Z"}]'
+        content: '[{"id":5,"product_name":"Mouse","category_id":5,"order":"11","price":4500,"file":"1655798819updatedFile.jpg","created_at":"2022-06-21T05:43:41.000000Z","updated_at":"2022-06-21T08:06:59.000000Z"},{"id":6,"product_name":"Cups","category_id":5,"order":"15","price":5000,"file":"1655799106girl.jpg","created_at":"2022-06-21T05:43:58.000000Z","updated_at":"2022-06-21T08:11:46.000000Z"},{"id":7,"product_name":"Fan","category_id":3,"order":"3","price":20000,"file":"1655790258girl2.jpg","created_at":"2022-06-21T05:44:18.000000Z","updated_at":"2022-06-21T05:44:18.000000Z"},{"id":8,"product_name":"Desk","category_id":3,"order":"4","price":50000,"file":"1655790337girl.jpg","created_at":"2022-06-21T05:45:37.000000Z","updated_at":"2022-06-21T05:45:37.000000Z"},{"id":9,"product_name":"Laptop","category_id":5,"order":"10","price":120000,"file":"1655792392updatedFile.jpg","created_at":"2022-06-21T06:19:52.000000Z","updated_at":"2022-06-21T06:19:52.000000Z"}]'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -93,7 +107,7 @@ endpoints:
         name: id
         description: 'The ID of the product.'
         required: true
-        example: 5
+        example: 1
         type: integer
         custom: []
     queryParameters: []
@@ -101,7 +115,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"id":5,"product_name":"Audi","category_id":5,"order":"10","created_at":"2022-06-20T11:50:10.000000Z","updated_at":"2022-06-20T11:59:36.000000Z"}'
+        content: '{"message":"No product found."}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -152,14 +166,14 @@ endpoints:
       authenticated: false
       custom: []
     headers:
-      Content-Type: application/json
+      Content-Type: multipart/form-data
       Accept: application/json
     urlParameters:
       id:
         name: id
         description: 'The ID of the product.'
         required: true
-        example: 4
+        example: 20
         type: integer
         custom: []
     queryParameters: []
@@ -173,17 +187,31 @@ endpoints:
         custom: []
       order:
         name: order
-        description: ''
+        description: 'The order of the product'
         required: true
-        example: rerum
-        type: string
+        example: 5
+        type: integer
         custom: []
       product_name:
         name: product_name
         description: 'The name of Product'
         required: true
-        example: numquam
+        example: optio
         type: string
+        custom: []
+      price:
+        name: price
+        description: 'The price of the product'
+        required: true
+        example: 18
+        type: integer
+        custom: []
+      file:
+        name: file
+        description: 'The image of the product'
+        required: true
+        example: null
+        type: file
         custom: []
     responses:
       -
