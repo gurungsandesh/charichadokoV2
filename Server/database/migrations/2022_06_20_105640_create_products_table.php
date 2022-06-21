@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('product_name')->unique();
             $table->unsignedBigInteger('category_id');
             $table->string('order')->unique();
+            $table->integer('price');
+            $table->string('file');
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });

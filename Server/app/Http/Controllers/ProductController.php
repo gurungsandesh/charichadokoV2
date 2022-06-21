@@ -35,15 +35,19 @@ class ProductController extends Controller
         $request->validate([
             'product_name' => 'required | unique:products',
             'order' => 'required | unique:products',
-            'category_id' => 'required'
+            'category_id' => 'required',
+            'price' => 'required',
+            'file'  => 'required | mimes:jpg,jpeg'
         ]);
-
-        $info = Product::create($request->all());
-        if ($info) {
-            return $info;
-        } else {
-            return response(['message' => 'Something went wrong']);
-        }
+        $fileName = $request->file->getClientOriginalName();
+        $fileExtension = $request->file->getClientOriginalExtension();
+        return $fileExtension;
+        // $info = Product::create($request->all());
+        // if ($info) {
+        //     return $info;
+        // } else {
+        //     return response(['message' => 'Something went wrong']);
+        // }
     }
 
     /**
