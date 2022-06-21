@@ -92,7 +92,7 @@ class ProductController extends Controller
             'file' => 'required | mimes:jpg,jpeg'
         ]);
 
-        return $request->all();
+        return $request->file('file');
         // $updateDetails = Product::find($id)->update($request->all());
         // if ($updateDetails) {
         //     return response(['message' => 'Product Updated Successfully.']);
