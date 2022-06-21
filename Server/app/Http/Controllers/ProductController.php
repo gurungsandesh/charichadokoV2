@@ -44,7 +44,7 @@ class ProductController extends Controller
         $newFileName = time().$fileName;
         $isUploaded = $request->file('file')->storePubliclyAs('public/product', $newFileName); 
         $info = Product::create([
-            'product_name' => $request->name,
+            'product_name' => $request->product_name,
             'category_id' => $request->category_id,
             'order' => $request->order,
             'price' => $request->price,
@@ -109,8 +109,13 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
         if ($product) {
-            $product->delete();
-            return $response(['message' => 'Product Deleted Successfully.']);
+            $fileDeleted = Storage::delete('public/product/'.$product->file);
+            $detailDeleted = $product->delete();
+            if (!$fileDeleted || !detailDeleted) {
+                return response(['message' => 'Product Deleted Successfully.']);
+            } else {
+                return response(['message' => 'Something went wrong.']);
+            }
         } else {
             return response(['message' => 'No product found.']);
         }
