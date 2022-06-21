@@ -87,15 +87,18 @@ class ProductController extends Controller
         $request->validate([
             'category_id' => 'required',
             'order' => 'required | unique:products',
-            'product_name' => 'required | unique:products'
+            'product_name' => 'required | unique:products',
+            'price' => 'required',
+            'file' => 'required | mimes:jpg,jpeg'
         ]);
 
-        $info = Product::find($id)->update($request->all());
-        if ($info) {
-            return response(['message' => 'Product Updated Successfully.']);
-        } else {
-            return response(['message' => 'Something went wrong.']);
-        }
+        return $request->all();
+        // $updateDetails = Product::find($id)->update($request->all());
+        // if ($updateDetails) {
+        //     return response(['message' => 'Product Updated Successfully.']);
+        // } else {
+        //     return response(['message' => 'Something went wrong.']);
+        // }
     }
 
     /**
@@ -111,7 +114,7 @@ class ProductController extends Controller
         if ($product) {
             $fileDeleted = Storage::delete('public/product/'.$product->file);
             $detailDeleted = $product->delete();
-            if (!$fileDeleted || !detailDeleted) {
+            if ($fileDeleted && $detailDeleted) {
                 return response(['message' => 'Product Deleted Successfully.']);
             } else {
                 return response(['message' => 'Something went wrong.']);
