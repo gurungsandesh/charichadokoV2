@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use Illuminate\Support\Facades\Storage;
 
 /**
  * @group Product Details
@@ -36,18 +37,24 @@ class ProductController extends Controller
             'product_name' => 'required | unique:products',
             'order' => 'required | unique:products',
             'category_id' => 'required',
-            'price' => 'required',
+            'price' => 'required | numeric',
             'file'  => 'required | mimes:jpg,jpeg'
         ]);
         $fileName = $request->file->getClientOriginalName();
-        $fileExtension = $request->file->getClientOriginalExtension();
-        return $fileExtension;
-        // $info = Product::create($request->all());
-        // if ($info) {
-        //     return $info;
-        // } else {
-        //     return response(['message' => 'Something went wrong']);
-        // }
+        $newFileName = time().$fileName;
+        $isUploaded = $request->file('file')->storePubliclyAs('public/product', $newFileName); 
+        $info = Product::create([
+            'product_name' => $request->name,
+            'category_id' => $request->category_id,
+            'order' => $request->order,
+            'price' => $request->price,
+            'file' => $newFileName
+        ]);
+        if (!$info || !$isUploaded) {
+            return response(['message' => 'Something went wrong']);
+        } else {
+            return $info;
+        }
     }
 
     /**
